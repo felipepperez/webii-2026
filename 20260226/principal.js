@@ -15,6 +15,7 @@ console.log("Aviso:".yellow, "atenção".yellow);
 console.log("Erro:".red,"falha".red);
 
 console.log("===moment===".cyan);
+moment.locale("pt-br");
 console.log("Hoje:",moment().format("DD/MM/YYYY"));
 console.log("Hoje:",moment().format("HH:mm:ss"));
 console.log("Data completa:",moment().format("dddd, D [de] MMMM [de] YYYY"));

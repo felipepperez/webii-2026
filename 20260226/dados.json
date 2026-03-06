@@ -22,8 +22,8 @@
                 "nome": "Maria"
             },
             {
-                "id": 2,
-                "nome": "Pedro"
+                "id": 0,
+                "nome": "João"
             },
             {
                 "id": 1,
@@ -40,6 +40,10 @@
             {
                 "id": 2,
                 "nome": "Pedro"
+            },
+            {
+                "id": 1,
+                "nome": "Maria"
             }
         ]
     }

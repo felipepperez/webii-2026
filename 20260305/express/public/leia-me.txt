@@ -1,0 +1,2 @@
+Arquivos nesta pasta "public" são servidos diretamente pelo Express.
+Acesse por: http://localhost:3000/estilo.css e http://localhost:3000/leia-me.txt
