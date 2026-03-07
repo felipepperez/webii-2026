@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="/estilo.css">
+</head>
+
+<body>
+    <h1>Login</h1>
+    {{erro}}
+    <form action="/login" method="POST">
+        <p><label>Usuário: <input type="text" name="usuario" required></label></p>
+        <p><label>Senha: <input type="password" name="senha" required></label></p>
+        <p><button type="submit">Entrar</button></p>
+    </form>
+    <p><a href="/">Voltar</a></p>
+</body>
+
+</html>
