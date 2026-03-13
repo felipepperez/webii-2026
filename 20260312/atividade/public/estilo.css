@@ -1,0 +1,28 @@
+body {
+    font-family: sans-serif;
+    max-width: 400px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+h1 {
+    color: #333;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+input {
+    width: 100%;
+    max-width: 200px;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}

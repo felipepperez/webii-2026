@@ -1,0 +1,60 @@
+body {
+  font-family: sans-serif;
+  max-width: 640px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+h1 {
+  color: #333;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+th, td {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  text-align: left;
+}
+th {
+  background: #f5f5f5;
+}
+.acoes a {
+  margin-right: 0.5rem;
+}
+.novo {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  background: #06c;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+}
+.novo:hover {
+  background: #05a;
+}
+label {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+input, textarea {
+  width: 100%;
+  max-width: 320px;
+  padding: 0.5rem;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+}
+textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+button {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+a {
+  color: #06c;
+  margin-right: 1rem;
+}

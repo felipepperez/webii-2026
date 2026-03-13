@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= tela==='listar' ? 'Lista de itens' : (item ? 'Editar' : 'Novo' ) + ' item' %>
+    </title>
+    <link rel="stylesheet" href="/estilo.css">
+</head>
+
+<body>
+    <% if(tela==='listar' ) { %>
+        <h1>Itens</h1>
+        <a class="novo" href="/novo">Novo item</a>
+        <% if(itens.length===0) { %>
+            <p>Nenhum item cadastrado.</p>
+            <% }else{ %>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Descrição</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% itens.forEach(function(item){%>
+                            <tr>
+                                <td><%= item.nome %></td>
+                                <td><%= item.descricao %></td>
+                                <td></td>
+                            </tr>
+                            <%})%>
+                    </tbody>
+                </table>
+                <% } %>
+                    <% } else if( tela==='form' ){ %>
+                        <h1>
+                            <%= (item ? 'Editar' : 'Novo' ) + ' item' %>
+                        </h1>
+                        <a href="/">Cancelar</a>
+                        <br><br>
+                        <form method="POST" action="/novo">
+                            <label>Nome</label>
+                            <input type="text" name="nome" value="" required>
+                            <label>Descrição</label>
+                            <textarea name="descricao"></textarea>
+                            <br>
+                            <button type="submit">
+                                <%= item ? 'Salvar' : 'Criar' %>
+                            </button>
+                        </form>
+                        <% } %>
+</body>
+
+</html>
