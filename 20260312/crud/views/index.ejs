@@ -30,7 +30,10 @@
                             <tr>
                                 <td><%= item.nome %></td>
                                 <td><%= item.descricao %></td>
-                                <td></td>
+                                <td class="acoes">
+                                    <a href="/editar/<%= item.id %>">Editar</a>
+                                    <a href="/excluir/<%= item.id %>" onclick="return confirm('Excluir este item?')">Excluir</a>
+                                </td>
                             </tr>
                             <%})%>
                     </tbody>
@@ -42,11 +45,11 @@
                         </h1>
                         <a href="/">Cancelar</a>
                         <br><br>
-                        <form method="POST" action="/novo">
+                        <form method="POST" action="<%= item ? '/editar/' + item.id : '/novo' %>">
                             <label>Nome</label>
-                            <input type="text" name="nome" value="" required>
+                            <input type="text" name="nome" value="<%= item ?  item.nome : '' %>" required>
                             <label>Descrição</label>
-                            <textarea name="descricao"></textarea>
+                            <textarea name="descricao"><%= item ?  item.descricao : '' %></textarea>
                             <br>
                             <button type="submit">
                                 <%= item ? 'Salvar' : 'Criar' %>

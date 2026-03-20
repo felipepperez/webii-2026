@@ -35,6 +35,39 @@ app.post('/novo', async (req, res) => {
     res.redirect("/");
 })
 
+app.get('/editar/:id', async (req, res) => {
+    const id = parseInt(req.params.id, 10);
+    const lista = await getLista();
+    const item = lista.find((i) => i.id === id);
+    if (!item) return res.redirect('/');
+    res.render("index", { tela: "form", itens: [], item });
+});
+
+app.post('/editar/:id', async (req, res) => {
+    const id = parseInt(req.params.id, 10);
+    const { nome, descricao } = req.body;
+    try {
+        const index = await db.getIndex("/itens/lista", id, "id");
+        await db.push(`/itens/lista[${index}]`, {
+            id,
+            nome: nome || "",
+            descricao: descricao || ""
+        })
+    } catch {
+    }
+    res.redirect("/");
+});
+
+app.get('/excluir/:id', async (req, res) => {
+    const id = parseInt(req.params.id, 10);
+    try {
+        const index = await db.getIndex("/itens/lista", id, "id");
+        await db.delete(`/itens/lista[${index}]`);
+    } catch {
+    }
+    res.redirect('/');
+})
+
 app.listen(PORT, () => {
     console.log(`Servidor rodando em http://localhost:${PORT}`);
 });

@@ -2,11 +2,6 @@
     "itens": {
         "lista": [
             {
-                "id": 1773364738207,
-                "nome": "Felipe",
-                "descricao": "Professor"
-            },
-            {
                 "id": 1773364967801,
                 "nome": "Pablo",
                 "descricao": "Aluno"
@@ -15,6 +10,11 @@
                 "id": 1773364985916,
                 "nome": "Davyson",
                 "descricao": "Aluno"
+            },
+            {
+                "id": 1773966207113,
+                "nome": "Felipe",
+                "descricao": "Professor"
             }
         ]
     }
